@@ -8,11 +8,8 @@ MAINTAINER Hugh Pierce
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# required packages for ansible
-RUN apt-get install -y python python-pip python-openssl
-
 # install ansible
-RUN pip install --upgrade pip && pip install ansible
+RUN apt-add-repository ppa:ansible/ansible -y && apt-get update && apt-get install ansible -y 
 
 # install rundeck user and keys
 RUN useradd -m -d /home/rundeck -s /bin/bash rundeck
