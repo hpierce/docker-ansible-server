@@ -16,3 +16,9 @@ RUN useradd -m -d /home/rundeck -s /bin/bash rundeck
 ADD .ssh /home/rundeck/.ssh
 RUN chown -R rundeck:rundeck /home/rundeck/.ssh
 
+# Add sample ansible configurations
+ADD ansible /etc/ansible
+
+# Add sample yaml scripts
+ADD root /root
+
