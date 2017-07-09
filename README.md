@@ -5,5 +5,4 @@ Very basic image with:
 - ansible user added
 - ansible keys added
 - sample ansible configuration - /etc/ansible
-- sample ansible scripts and yaml - /root
 
